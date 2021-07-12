@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation.xml"
+    app:startDestination="@id/media_list">
+
+    <fragment
+        android:id="@+id/media_list"
+        android:name="com.example.practical.module.media_list.MediaListFragment"
+        android:label="@string/media_list"
+        tools:layout="@layout/media_list_fragment">
+        <action
+            android:id="@+id/action_media_list_to_media_detail"
+            app:destination="@id/media_detail"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="mediaData"
+            app:argType="com.example.practical.api.modal.Content" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/media_detail"
+        android:name="com.example.practical.module.media_detail.MediaDetailFragment"
+        android:label="@string/media_detail"
+        tools:layout="@layout/media_detail_fragment">
+    </fragment>
+
+</navigation>

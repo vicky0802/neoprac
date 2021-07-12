@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".module.media_list.MediaListFragment">
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swp_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_media_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_media" />
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
